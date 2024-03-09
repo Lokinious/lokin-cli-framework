@@ -1,0 +1,61 @@
+name: computer
+version: 1.0.0
+description: Example model showing what is capable with the model spec generator
+requested_generation:
+  - langauge: python
+    version: 3.10
+  - components:
+    - rest_controllers:
+      - path: /api/v1/computers
+      - methods:
+        - get
+        - post
+        - put
+        - delete
+        - model: computer
+    - database:
+      - type: mongodb
+      - version: 4.4
+      - collection_name: computers
+      - key:
+        - model: computer
+          field: id
+model:
+  - name: computer
+  - fields:
+    - name: id
+      type: integer
+      description: Unique identifier for the model
+    - name: computer_name
+      type: string
+      description: Name of the computer
+    - name: os
+      type: string
+      description: Operating system of the computer
+    - name: cpu
+      type: string
+      description: CPU of the computer
+    - name: memory
+      type: string
+      description: Memory of the computer
+    - name: storage
+      type: string
+      description: Storage of the computer
+    - name: description
+      type: string
+      description: Description of the computer
+    - name: build_date
+      type: string
+      description: Date the computer was built
+    - name: price
+      type: float
+      description: Price of the computer
+    - name: warranty
+      type: string
+      description: Warranty of the computer
+    - name: status
+      type: string
+      description: Status of the computer
+
+      
+      

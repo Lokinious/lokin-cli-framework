@@ -1,0 +1,13 @@
+# Model Documentation
+
+Model Name: {{ model.name }}
+Model Version: {{ model.version }}
+Model Description: {{ model.description }}
+
+## Fields
+
+{% for field in model.model[1].fields %}
+- Name: {{ field.name }}
+- Type: {{ field.type }}
+- Description: {{ field.description }}
+{% endfor %}
